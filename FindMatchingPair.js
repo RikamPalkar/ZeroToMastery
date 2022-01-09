@@ -1,6 +1,6 @@
 /*
 Given 2 arrays, creates a function that let's user know (true/false)
-wheather these 2 arrays contains 2 common items
+whether these 2 arrays contains 2 common items
 
 For example1:
 const arrayOne = ['a','b','c','x']
@@ -13,7 +13,7 @@ const arrayTwo = ['z','y','x']
 Should return true
 */
 
-//**************************  Interview discussion **************************
+//************************** Interview discussion **************************
 /*  
 1. Are there only characters in the given arrays?
 Ans: No, it can contain numbers, negative numbers, special characters
@@ -61,7 +61,7 @@ console.log(GetMatchedElementsA_INTO_B(arrayOne, arrayTwo));
 
 
 //Second approach: We can change first array to object and then compare property with second array to see if its exist
-/* 
+/*
 Time Complexity: O(a + b)
 Space Complexity: O(n)
 
@@ -89,7 +89,7 @@ console.log(arrayOne);
 console.log(arrayTwo);
 function GetMatchedElementsA_PLUS_B(array1, array2) {
     //step 1: Loop through first array and create object where properties === items in the array
-    if ( array1== null || array2 == null || array1.length == 0 || array2.length == 0 ) return false;
+    if ( array1 == null || array2 == null || array1.length == 0 || array2.length == 0 ) return false;
     const map = {};
     for (let i of array1) {
         //do not enter repetative array elements, checking if object doesn't hold the same value
@@ -97,7 +97,7 @@ function GetMatchedElementsA_PLUS_B(array1, array2) {
             const item = i;
             map[item] = true;
         }
-    } 
+    }
     console.log(map);
     //step 2: Loop through second array and check if item in second array exist on created object
     for (let j of array2) {
@@ -128,7 +128,6 @@ console.log(GetMatchedElementsThird(arrayOne, arrayTwo));
 console.log(arrayEmptyArrayOne);
 console.log(arrayEmptyArrayTwo);
 console.log(GetMatchedElementsThird(arrayEmptyArrayOne, arrayEmptyArrayTwo));
-
 
 
 console.log('********** fourth approach **********');
